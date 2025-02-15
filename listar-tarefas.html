@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Tarefas</title>
+    <link rel="stylesheet" href="styles/listar-tarefas.css">
+</head>
+<body>
+    <h1>Listar Tarefas</h1>
+    <button id="add-task-button" class="btn-add">Adicionar Tarefa</button>
+    <button id="list-categories-button" class="btn-list" onclick="window.location.href='listar-categorias.html'">Listar Categorias</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Tarefa</th>
+                <th>Descrição</th>
+                <th>Categorias</th>
+                <th>Data-Criação</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example row -->
+            <tr>
+                <td>1</td>
+                <td>Comprar leite</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="scripts/listar-tarefas.js"></script>
+</body>
+</html>
