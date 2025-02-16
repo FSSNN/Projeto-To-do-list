@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Tarefas</title>
+    <link rel="stylesheet" href="styles/editar-tarefas.css">
+</head>
+<body>
+    <h1>Editar Tarefas</h1>
+    <form id="task-form">
+        <label for="task-name">Nome da Tarefa:</label>
+        <input type="text" id="task-name" name="task-name" required>
+        
+        <label for="task-desc">Descrição:</label>
+        <textarea id="task-desc" name="task-desc" required></textarea>
+        
+        <label for="task-date">Data de Conclusão:</label>
+        <input type="date" id="task-date" name="task-date" required>
+        
+        <label for="task-categories">Categorias:</label>
+        <div id="task-categories">
+            <!-- Categories will be populated by JavaScript -->
+        </div>
+        
+        <button type="submit">Editar Tarefa</button>
+    </form>
+    <script src="scripts/editar-tarefas.js"></script>
+</body>
+</html>

@@ -26,14 +26,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const actionsCell = document.createElement('td');
             const deleteButton = document.createElement('button');
-            deleteButton.classList.add( 'btn-delete');
+            deleteButton.classList.add('btn-delete');
             deleteButton.textContent = 'Delete';
             deleteButton.addEventListener('click', () => {
                 deleteTask(index);
             });
             actionsCell.appendChild(deleteButton);
-            row.appendChild(actionsCell);
 
+            const editButton = document.createElement('button');
+            editButton.classList.add('btn-edit');
+            editButton.textContent = 'Edit';
+            editButton.addEventListener('click', () => {
+                window.location.href = `editar-tarefas.html?id=${index}`;
+            });
+            actionsCell.appendChild(editButton);
+
+            row.appendChild(actionsCell);
             tbody.appendChild(row);
         });
     }

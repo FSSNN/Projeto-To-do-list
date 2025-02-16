@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     const tbody = document.querySelector('table tbody');
 
@@ -31,8 +30,14 @@ document.addEventListener('DOMContentLoaded', function() {
             deleteButton.textContent = 'Delete';
             deleteButton.addEventListener('click', () => deleteCategory(index));
             actionsCell.appendChild(deleteButton);
-            row.appendChild(actionsCell);
 
+            const editButton = document.createElement('button');
+            editButton.classList.add('btn-edit');
+            editButton.textContent = 'Edit';
+            editButton.addEventListener('click', () => editCategory(index));
+            actionsCell.appendChild(editButton);
+
+            row.appendChild(actionsCell);
             tbody.appendChild(row);
         });
     }
@@ -42,6 +47,10 @@ document.addEventListener('DOMContentLoaded', function() {
         categories.splice(index, 1);
         localStorage.setItem('categories', JSON.stringify(categories));
         loadCategories();
+    }
+
+    function editCategory(index) {
+        window.location.href = `editar-categorias.html?id=${index}`;
     }
 
     loadCategories();
